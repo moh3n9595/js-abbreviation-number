@@ -1,4 +1,4 @@
-# react-native-app-builder &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/js-abbreviation-number/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/js-abbreviation-number) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/js-abbreviation-number/compare)
+# js-abbreviation-number &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/js-abbreviation-number/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/js-abbreviation-number) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/js-abbreviation-number/compare)
 
 
 
@@ -22,7 +22,7 @@ npm install js-abbreviation-number
 
 import { abbreviateNumber } from "js-abbreviation-number";
 
-const num = abbreviateNumber(1000, 1); // expected 1K
+const num = abbreviateNumber(1000, 1); // expected 1.0K
 
 const num = abbreviateNumber(12, 0); // expected 12
 
