@@ -4,7 +4,6 @@
   "description": "Abbreviate numbers in javascript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "test": "jest --config=jest.config.json",
     "build": "tsc",
