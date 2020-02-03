@@ -70,4 +70,5 @@ workflows:
             - node-init
       - node-ts:
           requires:
-            - node-init
+            - node-eslint
+            - node-jest
