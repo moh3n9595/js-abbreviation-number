@@ -2,7 +2,7 @@ version: 2
 jobs:
   node-init:
     docker:
-      - image: circleci/node:10.12
+      - image: circleci/node:13
     steps:
       - checkout
     
@@ -20,7 +20,7 @@ jobs:
     
   node-eslint:
     docker:
-      - image: circleci/node:10.12
+      - image: circleci/node:13
     steps:
       - checkout
       
@@ -33,7 +33,7 @@ jobs:
 
   node-jest:
     docker:
-      - image: circleci/node:10.12
+      - image: circleci/node:13
     steps:
       - checkout
       
@@ -43,11 +43,22 @@ jobs:
       - run:
           name: Jest
           command: npm run test       
-  
+  node-ts:
+    docker:
+      - image: circleci/node:13
+    steps:
+      - checkout
+      
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
+            
+      - run:
+          name: Ts
+          command: npm run build 
           
 workflows:
   version: 2
-  test-build:
+  init-test-build:
     jobs:
       - node-init
       
@@ -55,5 +66,8 @@ workflows:
           requires:
             - node-init
       - node-jest:
+          requires:
+            - node-init
+      - node-ts:
           requires:
             - node-init
