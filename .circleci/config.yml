@@ -1,0 +1,59 @@
+version: 2
+jobs:
+  node-init:
+    docker:
+      - image: circleci/node:10.12
+    steps:
+      - checkout
+    
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
+      
+      - run:
+          name: Install NPM
+          command: npm i
+          
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+    
+  node-eslint:
+    docker:
+      - image: circleci/node:10.12
+    steps:
+      - checkout
+      
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
+            
+      - run:
+          name: Eslint
+          command: npm run lint
+
+  node-jest:
+    docker:
+      - image: circleci/node:10.12
+    steps:
+      - checkout
+      
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
+            
+      - run:
+          name: Jest
+          command: npm run test       
+  
+          
+workflows:
+  version: 2
+  test-build:
+    jobs:
+      - node-init
+      
+      - node-eslint:
+          requires:
+            - node-init
+      - node-jest:
+          requires:
+            - node-init

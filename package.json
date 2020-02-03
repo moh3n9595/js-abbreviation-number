@@ -1,0 +1,40 @@
+{
+  "name": "js-abbreviation-number",
+  "version": "0.1.0",
+  "description": "Abbreviate numbers in javascript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "jest --config=jest.config.json",
+    "build": "tsc",
+    "lint": "./node_modules/.bin/eslint *.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moh3n9595/js-abbreviation-number.git"
+  },
+  "homepage": "https://github.com/moh3n9595/js-abbreviation-number#readme",
+  "keywords": [
+    "js",
+    "number",
+    "abbreviation",
+    "javascript"
+  ],
+  "author": {
+    "name": "Mohsen Madani",
+    "email": "mohsenando@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^25.1.0",
+    "@types/node": "^9.4.6",
+    "@typescript-eslint/parser": "^2.18.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.19.1",
+    "jest": "^25.1.0",
+    "ts-jest": "^22.4.1",
+    "typescript": "^3.7.5"
+  }
+}
