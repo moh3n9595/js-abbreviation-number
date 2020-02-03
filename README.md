@@ -3,7 +3,7 @@
 
 
 <p align="center">
-    <img src="./images/cover.png" style="border-radius: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <img src="./images/cover.png">
   <br>
   <p align="center">
     Abbreviate numbers in javascript
@@ -31,7 +31,7 @@ const num = abbreviateNumber(1111, 2); // expected 1.11K
 const num = abbreviateNumber(1234.56, 1); // expected 1.2K
 
 ```
-
+`abbreviateNumber(num: number, digit?: number, symbols?: Array<string>): string`
 
 The `symbols` is optional. It can be an array of units, defaulting to `["", "K", "M", "G", "T", "P", "E"]`.
 
