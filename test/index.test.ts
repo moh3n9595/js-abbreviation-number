@@ -51,3 +51,11 @@ test("47475782130 should be --> 47.48T", () => {
 test("-1234 should be --> -1.2Kilo", () => {
   expect(abbreviateNumber(-1234, 1, ["", "Kilo"])).toBe("-1.2Kilo");
 });
+
+test("12.34 should be --> 12.34", () => {
+  expect(abbreviateNumber(12.34, 2)).toBe("12.34");
+});
+
+test("1234.56 should be --> 1.2K", () => {
+  expect(abbreviateNumber(1234.56, 1)).toBe("1.2K");
+});

@@ -1,11 +1,9 @@
-# react-native-app-builder &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/js-abbreviation-number/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/js-abbreviation-number) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/react-native-app-builder/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/react-native-app-builder/compare)
+# react-native-app-builder &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/js-abbreviation-number/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/js-abbreviation-number) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/js-abbreviation-number/compare)
 
 
-
-## Advantages
 
 <p align="center">
-    <img src="./images/cover.png">
+    <img src="./images/cover.png" style="border-radius: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <br>
   <p align="center">
     Abbreviate numbers in javascript
@@ -21,12 +19,23 @@ npm install js-abbreviation-number
 ## Usage
 
 ```
+
 import { abbreviateNumber } from "js-abbreviation-number";
 
 const num = abbreviateNumber(1000, 1); // expected 1K
 
+const num = abbreviateNumber(12, 0); // expected 12
+
+const num = abbreviateNumber(1111, 2); // expected 1.11K
+
+const num = abbreviateNumber(1234.56, 1); // expected 1.2K
+
 ```
 
+
+The `symbols` is optional. It can be an array of units, defaulting to `["", "K", "M", "G", "T", "P", "E"]`.
+
+`digit` is also optional. It defaults to 1.
 
 ## Contributing
 
