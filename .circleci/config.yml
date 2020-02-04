@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:13
     steps:
       - checkout
-    
+  
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
       
@@ -31,6 +31,19 @@ jobs:
           name: Eslint
           command: npm run lint
 
+  node-prettier:
+    docker:
+      - image: circleci/node:13
+    steps:
+      - checkout
+      
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
+            
+      - run:
+          name: Prettier
+          command: npm run prettier-check
+
   node-jest:
     docker:
       - image: circleci/node:13
@@ -53,7 +66,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}-{{ arch }}
             
       - run:
-          name: Ts
+          name: Typescript
           command: npm run build 
           
 workflows:
@@ -65,6 +78,9 @@ workflows:
       - node-eslint:
           requires:
             - node-init
+      - node-prettier:
+          requires:
+            - node-eslint
       - node-jest:
           requires:
             - node-init
@@ -72,3 +88,4 @@ workflows:
           requires:
             - node-eslint
             - node-jest
+            - node-prettier

@@ -1,0 +1,7 @@
+babel.config.js
+node_modules/*
+README.md
+jest.config.json
+test/
+dist/
+.*

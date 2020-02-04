@@ -67,3 +67,6 @@ typings/
 
 # CI/CD
 
+
+# IDEA
+.vscode
