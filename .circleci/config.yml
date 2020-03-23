@@ -1,5 +1,14 @@
-version: 2
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.2
+
 jobs:
+  node-codecov:
+    steps:
+      - codecov/upload:
+          file: {{ coverage_report_filepath }}
+          
   node-init:
     docker:
       - image: circleci/node:13
@@ -84,8 +93,14 @@ workflows:
       - node-jest:
           requires:
             - node-init
+      - node-codecov:
+          requires:
+            - node-eslint
+            - node-jest
+            - node-prettier
       - node-ts:
           requires:
             - node-eslint
             - node-jest
             - node-prettier
+      
