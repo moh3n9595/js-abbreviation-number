@@ -1,6 +1,6 @@
 version: 2
 
-jobs:        
+jobs:       
   node-init:
     docker:
       - image: circleci/node:13
@@ -56,7 +56,12 @@ jobs:
             
       - run:
           name: Jest
-          command: npm run test       
+          command: npm run test 
+
+      - run:
+          name: Codecov
+          command: npm run codecov
+          
   node-ts:
     docker:
       - image: circleci/node:13

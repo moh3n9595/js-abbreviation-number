@@ -37,6 +37,7 @@ builds/
 node_modules/
 jspm_packages/
 dist/
+coverage/
 
 # TypeScript v1 declaration files
 typings/

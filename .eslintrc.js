@@ -3,15 +3,12 @@ module.exports = {
     browser: true,
     commonjs: false,
     es6: true,
+    node: true,
+    jest: true
   },
   extends: [
     "eslint:recommended"
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-    process: true
-  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
