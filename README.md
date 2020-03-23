@@ -1,4 +1,4 @@
-# js-abbreviation-number &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/js-abbreviation-number/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/js-abbreviation-number) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/js-abbreviation-number/compare)
+# js-abbreviation-number &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/js-abbreviation-number/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/js-abbreviation-number) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/js-abbreviation-number/compare) [![codecov](https://codecov.io/gh/moh3n9595/js-abbreviation-number/branch/master/graph/badge.svg)](https://codecov.io/gh/moh3n9595/js-abbreviation-number)
 
 
 
