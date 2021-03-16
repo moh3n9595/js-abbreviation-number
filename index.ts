@@ -10,7 +10,7 @@ const defaultOptions = {
 export function abbreviateNumber(
   num: number,
   digit: number = 1,
-  options?: Options | Options['symbols']
+  options?: Options | Options["symbols"]
 ): string {
   // Previous options style
   if (Array.isArray(options)) {
