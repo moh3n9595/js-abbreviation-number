@@ -1,26 +1,26 @@
 interface Options {
-  padding?: boolean,
-  symbols?: string[],
+  padding?: boolean;
+  symbols?: string[];
 }
 const defaultOptions = {
   padding: true,
-  symbols: ["", "K", "M", "G", "T", "P", "E"]
+  symbols: ["", "K", "M", "G", "T", "P", "E"],
 };
 
 export function abbreviateNumber(
   num: number,
   digit: number = 1,
-  options?: Options | Options["symbols"]
+  options?: Options | Options["symbols"],
 ): string {
   // Previous options style
   if (Array.isArray(options)) {
-    options = {symbols: options};
+    options = { symbols: options };
   }
 
-  const {symbols, padding}: Required<Options> = Object.assign(
+  const { symbols, padding }: Required<Options> = Object.assign(
     {},
     defaultOptions,
-    options
+    options,
   );
 
   // handle negatives
