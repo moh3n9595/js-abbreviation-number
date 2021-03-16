@@ -64,6 +64,10 @@ test("-1200 should be --> -1.2Kilo without padding", () => {
   expect(abbreviateNumber(-1200, 4, {symbols: ["", "Kilo"], padding: false})).toBe("-1.2Kilo");
 });
 
+test("-1234567 should be --> -1234.5Kilo", () => {
+  expect(abbreviateNumber(-1234, 1, {symbols: ["", "Kilo"]})).toBe("-1.2Kilo");
+});
+
 test("12.34 should be --> 12.34", () => {
   expect(abbreviateNumber(12.34, 2)).toBe("12.34");
 });
