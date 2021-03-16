@@ -27,6 +27,9 @@
     "name": "Mohsen Madani",
     "email": "mohsenando@gmail.com"
   },
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
