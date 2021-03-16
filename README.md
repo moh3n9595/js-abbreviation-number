@@ -26,16 +26,27 @@ const num = abbreviateNumber(1000, 1); // expected 1.0K
 
 const num = abbreviateNumber(12, 0); // expected 12
 
-const num = abbreviateNumber(1111, 2); // expected 1.11K
+const num = abbreviateNumber(1100, 2); // expected 1.10K
 
-const num = abbreviateNumber(1234.56, 1); // expected 1.2K
+const num = abbreviateNumber(1100, 2, {padding: false}); // expected 1.1K
+
+const num = abbreviateNumber(1234.56, 2); // expected 1.23K
+
+const num = abbreviateNumber(1234, 1, {symbols: ['', 'kg']}); // expected 1.2kg
+
+const num = abbreviateNumber(1234567, 1, {symbols: ['', 'kg']}); // expected 1234.5kg
 
 ```
-`abbreviateNumber(num: number, digit?: number, symbols?: Array<string>): string`
 
-The `symbols` is optional. It can be an array of units, defaulting to `["", "K", "M", "G", "T", "P", "E"]`.
+`abbreviateNumber(num: number, digit?: number, options?: {symbols?: string[]; padding: boolean}): string`
 
-`digit` is also optional. It defaults to 1.
+`digit` is optional (unless you need to specify the `options` object). It defaults to 1.
+
+The `options` object is optional too:
+
+- `symbols` can be an array of units, defaulting to `["", "K", "M", "G", "T", "P", "E"]`.
+- `padding` determines whether to keep the exact number of digits or to drop trailing zeroes.
+
 
 ## Contributing
 
