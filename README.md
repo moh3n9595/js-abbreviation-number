@@ -1,14 +1,19 @@
-# js-abbreviation-number &middot; ![CI/CD](https://github.com/moh3n9595/js-abbreviation-number/workflows/Continuous%20Integration/badge.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/js-abbreviation-number/compare) [![codecov](https://codecov.io/gh/moh3n9595/js-abbreviation-number/branch/master/graph/badge.svg)](https://codecov.io/gh/moh3n9595/js-abbreviation-number) [![CodeFactor](https://www.codefactor.io/repository/github/moh3n9595/js-abbreviation-number/badge/master)](https://www.codefactor.io/repository/github/moh3n9595/js-abbreviation-number/overview/master) [![NPM](https://img.shields.io/npm/v/js-abbreviation-number.svg)](https://www.npmjs.com/package/js-abbreviation-number) [![GitHub contributors](https://img.shields.io/github/contributors/moh3n9595/js-abbreviation-number.svg)](https://GitHub.com/moh3n9595/js-abbreviation-number/contributors/)
+<div align="center">
+	<p align="center">
+		<img src="./images/cover.png"/>
+	</p>
+	<h1 align="center">js-abbreviation-number</h1>
+	<p align="center">Abbreviate numbers in javascript</p>
 
+![CI/CD](https://github.com/moh3n9595/js-abbreviation-number/workflows/Continuous%20Integration/badge.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/js-abbreviation-number/compare)
+[![codecov](https://codecov.io/gh/moh3n9595/js-abbreviation-number/branch/master/graph/badge.svg)](https://codecov.io/gh/moh3n9595/js-abbreviation-number) [![CodeFactor](https://www.codefactor.io/repository/github/moh3n9595/js-abbreviation-number/badge/master)](https://www.codefactor.io/repository/github/moh3n9595/js-abbreviation-number/overview/master)
+[![NPM](https://img.shields.io/npm/v/js-abbreviation-number.svg)](https://www.npmjs.com/package/js-abbreviation-number)
+[![GitHub contributors](https://img.shields.io/github/contributors/moh3n9595/js-abbreviation-number.svg)](https://GitHub.com/moh3n9595/js-abbreviation-number/contributors/)
 
-
-<p align="center">
-    <img src="./images/cover.png">
-  <br>
-  <p align="center">
-    Abbreviate numbers in javascript
-  </p>
-</p>
+</div>
+<hr />
 
 ## Installation
 
