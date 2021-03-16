@@ -23,8 +23,7 @@ npm install js-abbreviation-number
 
 ## Usage
 
-```
-
+```js
 import { abbreviateNumber } from "js-abbreviation-number";
 
 const num = abbreviateNumber(1000, 1); // expected 1.0K
