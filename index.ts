@@ -1,8 +1,28 @@
+interface Options {
+  padding?: boolean,
+  symbols?: string[],
+}
+const defaultOptions = {
+  padding: true,
+  symbols: ["", "K", "M", "G", "T", "P", "E"]
+};
+
 export function abbreviateNumber(
   num: number,
   digit: number = 1,
-  symbols: Array<string> = ["", "K", "M", "G", "T", "P", "E"],
+  options?: Options | Options['symbols']
 ): string {
+  // Previous options style
+  if (Array.isArray(options)) {
+    options = {symbols: options};
+  }
+
+  const {symbols, padding}: Required<Options> = Object.assign(
+    {},
+    defaultOptions,
+    options
+  );
+
   // handle negatives
   const sign = Math.sign(num) >= 0;
   num = Math.abs(num);
@@ -22,6 +42,11 @@ export function abbreviateNumber(
   // scale the number
   const scaled = num / scale;
 
+  let rounded = scaled.toFixed(digit);
+  if (!padding) {
+    rounded = String(Number(rounded));
+  }
+
   // format number and add suffix
-  return (!sign ? "-" : "") + scaled.toFixed(digit) + suffix;
+  return (!sign ? "-" : "") + rounded + suffix;
 }
