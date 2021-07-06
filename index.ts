@@ -31,7 +31,7 @@ export function abbreviateNumber(
   const tier = (Math.log10(num) / 3) | 0;
 
   // if zero, we don't need a suffix
-  if (tier == 0) return num.toString();
+  if (tier == 0) return (!sign ? "-" : "") + num.toString();
 
   // get suffix and determine scale
   const suffix = symbols[tier];

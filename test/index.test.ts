@@ -1,5 +1,13 @@
 import { abbreviateNumber } from "../index";
 
+test("-25 should be --> -25", () => {
+  expect(abbreviateNumber(-25, 0)).toBe("-25");
+});
+
+test("-999 should be --> -999", () => {
+  expect(abbreviateNumber(-999, 2)).toBe("-999");
+});
+
 test("1000 should be --> 1K", () => {
   expect(abbreviateNumber(1000, 0)).toBe("1K");
 });
