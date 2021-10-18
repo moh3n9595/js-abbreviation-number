@@ -4,7 +4,7 @@ interface Options {
 }
 const defaultOptions = {
   padding: true,
-  symbols: ["", "K", "M", "G", "T", "P", "E"],
+  symbols: ["", "k", "M", "G", "T", "P", "E"],
 };
 
 export function abbreviateNumber(
