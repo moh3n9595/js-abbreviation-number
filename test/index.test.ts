@@ -8,32 +8,32 @@ test("-999 should be --> -999", () => {
   expect(abbreviateNumber(-999, 2)).toBe("-999");
 });
 
-test("1000 should be --> 1K", () => {
-  expect(abbreviateNumber(1000, 0)).toBe("1K");
+test("1000 should be --> 1k", () => {
+  expect(abbreviateNumber(1000, 0)).toBe("1k");
 });
 
-test("1000 should be --> 1.0K", () => {
-  expect(abbreviateNumber(1000, 1)).toBe("1.0K");
+test("1000 should be --> 1.0k", () => {
+  expect(abbreviateNumber(1000, 1)).toBe("1.0k");
 });
 
-test("1000 should be --> 1.00K", () => {
-  expect(abbreviateNumber(1000, 2)).toBe("1.00K");
+test("1000 should be --> 1.00k", () => {
+  expect(abbreviateNumber(1000, 2)).toBe("1.00k");
 });
 
-test("1000 should be --> 1K without padding", () => {
-  expect(abbreviateNumber(1000, 2, {padding: false})).toBe("1K");
+test("1000 should be --> 1k without padding", () => {
+  expect(abbreviateNumber(1000, 2, {padding: false})).toBe("1k");
 });
 
-test("12345 should be --> 12K", () => {
-  expect(abbreviateNumber(12345, 0)).toBe("12K");
+test("12345 should be --> 12k", () => {
+  expect(abbreviateNumber(12345, 0)).toBe("12k");
 });
 
-test("12345 should be --> 12.3K", () => {
-  expect(abbreviateNumber(12345, 1)).toBe("12.3K");
+test("12345 should be --> 12.3k", () => {
+  expect(abbreviateNumber(12345, 1)).toBe("12.3k");
 });
 
-test("12344 should be --> 12.34K", () => {
-  expect(abbreviateNumber(12344, 2)).toBe("12.34K");
+test("12344 should be --> 12.34k", () => {
+  expect(abbreviateNumber(12344, 2)).toBe("12.34k");
 });
 
 test("123456789112345678923456789 should be --> RangeError!", () => {
@@ -48,8 +48,8 @@ test("12 should be --> 12", () => {
   expect(abbreviateNumber(12, 2)).toBe("12");
 });
 
-test("-1234 should be --> -1.2K", () => {
-  expect(abbreviateNumber(-1234, 1)).toBe("-1.2K");
+test("-1234 should be --> -1.2k", () => {
+  expect(abbreviateNumber(-1234, 1)).toBe("-1.2k");
 });
 
 test("47475782130 should be --> 47.48G", () => {
@@ -80,6 +80,6 @@ test("12.34 should be --> 12.34", () => {
   expect(abbreviateNumber(12.34, 2)).toBe("12.34");
 });
 
-test("1234.56 should be --> 1.2K", () => {
-  expect(abbreviateNumber(1234.56, 1)).toBe("1.2K");
+test("1234.56 should be --> 1.2k", () => {
+  expect(abbreviateNumber(1234.56, 1)).toBe("1.2k");
 });
