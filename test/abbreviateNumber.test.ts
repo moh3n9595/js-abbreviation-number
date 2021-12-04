@@ -1,4 +1,4 @@
-import abbreviateNumber from "../functions/abbreviateNumber";
+import {abbreviateNumber} from "../src/abbreviateNumber";
 
 test("-25 should be --> -25", () => {
   expect(abbreviateNumber(-25, 0)).toBe("-25");
@@ -37,6 +37,7 @@ test("12344 should be --> 12.34k", () => {
 });
 
 test("123456789112345678923456789 should be --> RangeError!", () => {
+  // eslint-disable-next-line @typescript-eslint/no-loss-of-precision
   expect(() => abbreviateNumber(123456789112345678923456789, 0)).toThrow(
     RangeError,
   );
@@ -90,4 +91,8 @@ test("12.34 should be --> 12.34", () => {
 
 test("1234.56 should be --> 1.2k", () => {
   expect(abbreviateNumber(1234.56, 1)).toBe("1.2k");
+});
+
+test("12 should be --> 12", () => {
+  expect(abbreviateNumber(12)).toBe("12");
 });
