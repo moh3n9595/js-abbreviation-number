@@ -6,18 +6,23 @@ module.exports = {
     node: true,
     jest: true
   },
-  extends: [
-    "eslint:recommended"
+  plugins: [
+    "@typescript-eslint",
   ],
-  parser: '@typescript-eslint/parser',
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: "module"
   },
   rules: {
     "arrow-body-style": 2,
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
-    "prefer-const": 1
+    "prefer-const": 1,
+    "@typescript-eslint/no-unused-vars": "off",
   }
 };
