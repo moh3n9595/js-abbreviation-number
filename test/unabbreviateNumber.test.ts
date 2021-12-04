@@ -1,4 +1,4 @@
-import {unabbreviateNumber} from "../src/unabbreviateNumber";
+import { unabbreviateNumber } from "../src/unabbreviateNumber";
 
 test("0 should be 0", () => {
   expect(unabbreviateNumber("0")).toBe(0);
@@ -12,8 +12,24 @@ test("25 should be 25", () => {
   expect(unabbreviateNumber("25")).toBe(25);
 });
 
+test("666 should be 666", () => {
+  expect(unabbreviateNumber("666")).toBe(666);
+});
+
 test("-25 should be -25", () => {
   expect(unabbreviateNumber("-25")).toBe(-25);
+});
+
+test("-4800 should be -4800", () => {
+  expect(unabbreviateNumber("-4800")).toBe(-4800);
+});
+
+test("-0820 should be -820", () => {
+  expect(unabbreviateNumber("-820")).toBe(-820);
+});
+
+test("09950 should be 9950", () => {
+  expect(unabbreviateNumber("9950")).toBe(9950);
 });
 
 test("25k should be 25000", () => {
@@ -40,224 +56,205 @@ test("-1.123456k should be -1123.456", () => {
   expect(unabbreviateNumber("-1.123456k")).toBe(-1123.456);
 });
 
-// test("666 shoud be Error", () => {
-//   expect(() => unabbreviateNumber("666")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("zZz should be Error", () => {
+  expect(() => unabbreviateNumber("zZz")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("-4800 shoud be Error", () => {
-//   expect(() => unabbreviateNumber("-4800")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("abc should be Error", () => {
+  expect(() => unabbreviateNumber("abc")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("1000000 shoud be Error", () => {
-//   expect(() => unabbreviateNumber("1000000")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("abck should be Error", () => {
+  expect(() => unabbreviateNumber("abck")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("-0820 shoud be Error", () => {
-//   expect(() => unabbreviateNumber("-0820")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("zZzT should be Error", () => {
+  expect(() => unabbreviateNumber("abcT")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("09950 shoud be Error", () => {
-//   expect(() => unabbreviateNumber("09950")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("kzZz should be Error", () => {
+  expect(() => unabbreviateNumber("kzZz")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("zZz shoud be Error", () => {
-//   expect(() => unabbreviateNumber("zZz")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("abkc should be Error", () => {
+  expect(() => unabbreviateNumber("abkc")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("abc shoud be Error", () => {
-//   expect(() => unabbreviateNumber("abc")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("237M should be 237000000", () => {
+  expect(unabbreviateNumber("237M")).toBe(237000000);
+});
 
-// test("abcK shoud be Error", () => {
-//   expect(() => unabbreviateNumber("abcK")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("00237k should be 237000", () => {
+  expect(unabbreviateNumber("00237k")).toBe(237000);
+});
 
-// test("zZzT shoud be Error", () => {
-//   expect(() => unabbreviateNumber("abcT")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("-00237k should be -237000", () => {
+  expect(unabbreviateNumber("-237k")).toBe(-237000);
+});
 
-// test("KzZz shoud be Error", () => {
-//   expect(() => unabbreviateNumber("KzZz")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("237zZz should be Error", () => {
+  expect(() => unabbreviateNumber("237zZz")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("abKc shoud be Error", () => {
-//   expect(() => unabbreviateNumber("abKc")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("zZz237 should be Error", () => {
+  expect(() => unabbreviateNumber("zZz237")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("237K shoud be 237000", () => {
-//   expect(unabbreviateNumber("237K")).toBe(237000);
-// });
+test("237zk should be Error", () => {
+  expect(() => unabbreviateNumber("237zk")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("237M shoud be 237000000", () => {
-//   expect(unabbreviateNumber("237M")).toBe(237000000);
-// });
+test("2z37k should be Error", () => {
+  expect(() => unabbreviateNumber("2z37k")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("00237K shoud be 237000", () => {
-//   expect(unabbreviateNumber("00237K")).toBe(237000);
-// });
+test("z237k should be Error", () => {
+  expect(() => unabbreviateNumber("z237k")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("-237K shoud be -237000", () => {
-//   expect(unabbreviateNumber("-237K")).toBe(-237000);
-// });
+test("237kz should be Error", () => {
+  expect(() => unabbreviateNumber("237kz")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("-00237K shoud be -237000", () => {
-//   expect(unabbreviateNumber("-237K")).toBe(-237000);
-// });
+test("237k666 should be Error", () => {
+  expect(() => unabbreviateNumber("237k666")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("237 K shoud be 237000", () => {
-//   expect(unabbreviateNumber("237 K")).toBe(237000);
-// });
+test("237kkk should be Error", () => {
+  expect(() => unabbreviateNumber("237kkk")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("237zZz shoud be Error", () => {
-//   expect(() => unabbreviateNumber("237zZz")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("237k k should be Error", () => {
+  expect(() => unabbreviateNumber("237k k")).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("zZz237 shoud be Error", () => {
-//   expect(() => unabbreviateNumber("zZz237")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("666 with [ , kilo, Mega, Giga, Tera, Peta, Exa] should be 666", () => {
+  expect(
+    unabbreviateNumber("666", [
+      "",
+      "kilo",
+      "Mega",
+      "Giga",
+      "Tera",
+      "peta",
+      "Exa",
+    ]),
+  ).toBe(666);
+});
 
-// test("237zK shoud be Error", () => {
-//   expect(() => unabbreviateNumber("237zK")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("666k with [ , kilo, Mega, Giga, Tera, Peta, Exa] should be Error", () => {
+  expect(() =>
+    unabbreviateNumber("666k", [
+      "",
+      "kilo",
+      "Mega",
+      "Giga",
+      "Tera",
+      "peta",
+      "Exa",
+    ]),
+  ).toThrow(new Error("This is not a valid input"));
+});
 
-// test("2z37K shoud be Error", () => {
-//   expect(() => unabbreviateNumber("2z37K")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("666kilo with [ , kilo, Mega, Giga, Tera, Peta, Exa] should be 666000", () => {
+  expect(
+    unabbreviateNumber("666kilo", [
+      "",
+      "kilo",
+      "Mega",
+      "Giga",
+      "Tera",
+      "peta",
+      "Exa",
+    ]),
+  ).toBe(666000);
+});
 
-// test("z237K shoud be Error", () => {
-//   expect(() => unabbreviateNumber("z237K")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("666 kilo with [ , kilo, Mega, Giga, Tera, Peta, Exa] should be Error", () => {
+  expect(() =>
+    unabbreviateNumber("666 kilo", [
+      "",
+      "kilo",
+      "Mega",
+      "Giga",
+      "Tera",
+      "peta",
+      "Exa",
+    ]),
+  ).toThrow(new Error("This is not a valid input"));
+});
 
-// test("237Kz shoud be Error", () => {
-//   expect(() => unabbreviateNumber("237Kz")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("666Exa with [ , kilo, Mega, Giga, Tera, Peta, Exa] should be 666000000000000000000", () => {
+  expect(
+    unabbreviateNumber("666Exa", [
+      "",
+      "kilo",
+      "Mega",
+      "Giga",
+      "Tera",
+      "peta",
+      "Exa",
+    ]),
+  ).toBe(666000000000000000000);
+});
 
-// test("237K666 shoud be Error", () => {
-//   expect(() => unabbreviateNumber("237K666")).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
+test("666kilo with [ , kilo, Mega] should be 666000", () => {
+  expect(unabbreviateNumber("666kilo", ["", "kilo", "Mega"])).toBe(666000);
+});
 
-// test("666 with [Kilo, Mega, Giga, Tera, Peta, Exa] shoud be Error", () => {
-//   expect(() =>
-//     unabbreviateNumber("666", ["Kilo", "Mega", "Giga", "Tera", "peta", "Exa"]),
-//   ).toThrow(new Error("This is not a valid input"));
-// });
+test("666Giga with [ , kilo, Mega] should be Error", () => {
+  expect(() => unabbreviateNumber("666Giga", ["", "kilo", "Mega"])).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("666K with [Kilo, Mega, Giga, Tera, peta, Exa] shoud be Error", () => {
-//   expect(() =>
-//     unabbreviateNumber("666K", ["Kilo", "Mega", "Giga", "Tera", "peta", "Exa"]),
-//   ).toThrow(new Error("This is not a valid input"));
-// });
+test("666T with [ , kilo, Mega] should be Error", () => {
+  expect(() => unabbreviateNumber("666T", ["", "kilo", "Mega"])).toThrow(
+    new Error("This is not a valid input"),
+  );
+});
 
-// test("666Kilo with [Kilo, Mega, Giga, Tera, peta, Exa] shoud be 666000", () => {
-//   expect(
-//     unabbreviateNumber("666Kilo", [
-//       "Kilo",
-//       "Mega",
-//       "Giga",
-//       "Tera",
-//       "peta",
-//       "Exa",
-//     ]),
-//   ).toBe(666000);
-// });
-
-// test("666 Kilo with [Kilo, Mega, Giga, Tera, peta, Exa] shoud be 666000", () => {
-//   expect(
-//     unabbreviateNumber("666 Kilo", [
-//       "Kilo",
-//       "Mega",
-//       "Giga",
-//       "Tera",
-//       "peta",
-//       "Exa",
-//     ]),
-//   ).toBe(666000);
-// });
-
-// test("666Exa with [Kilo, Mega, Giga, Tera, peta, Exa] shoud be 666000000000000000000", () => {
-//   expect(
-//     unabbreviateNumber("666Exa", [
-//       "Kilo",
-//       "Mega",
-//       "Giga",
-//       "Tera",
-//       "peta",
-//       "Exa",
-//     ]),
-//   ).toBe(666000000000000000000);
-// });
-
-// test("666Kilo with [Kilo, Mega] shoud be 666000", () => {
-//   expect(
-//     unabbreviateNumber("666 Kilo", [
-//       "Kilo",
-//       "Mega",
-//       "Giga",
-//       "Tera",
-//       "peta",
-//       "Exa",
-//     ]),
-//   ).toBe(666000);
-// });
-
-// test("666Giga with [Kilo, Mega] shoud be Error", () => {
-//   expect(() => unabbreviateNumber("666Giga", ["Kilo", "Mega"])).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
-
-// test("666T with [Kilo, Mega] shoud be Error", () => {
-//   expect(() => unabbreviateNumber("666T", ["Kilo", "Mega"])).toThrow(
-//     new Error("This is not a valid input"),
-//   );
-// });
-
-// test("666Zetta with [Kilo, Mega, Giga, Tera, peta, Exa, Zetta] shoud be 666000000000000000000000", () => {
-//   expect(
-//     unabbreviateNumber("666Zetta", [
-//       "Kilo",
-//       "Mega",
-//       "Giga",
-//       "Tera",
-//       "peta",
-//       "Exa",
-//       "Zetta",
-//     ]),
-//   ).toBe(666000000000000000000000);
-// });
+test("666Zetta with [ , kilo, Mega, Giga, Tera, peta, Exa, Zetta] should be 666000000000000000000000", () => {
+  expect(
+    unabbreviateNumber("666Zetta", [
+      "",
+      "kilo",
+      "Mega",
+      "Giga",
+      "Tera",
+      "peta",
+      "Exa",
+      "Zetta",
+    ]),
+  ).toBe(666000000000000000000000);
+});

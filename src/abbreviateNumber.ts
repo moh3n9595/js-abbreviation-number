@@ -11,45 +11,41 @@ const defaultOptions = {
 };
 
 export function abbreviateNumber(
-         num: number,
-         digit = 1,
-         options?: AbbreviateOptions | AbbreviateOptions["symbols"],
-       ): string {
-         // Previous options style
-         if (Array.isArray(options)) {
-           options = { symbols: options };
-         }
+  num: number,
+  digit = 1,
+  options?: AbbreviateOptions | AbbreviateOptions["symbols"],
+): string {
+  // Previous options style
+  if (Array.isArray(options)) {
+    options = { symbols: options };
+  }
 
-         const { symbols, padding } = Object.assign(
-           {},
-           defaultOptions,
-           options,
-         );
+  const { symbols, padding } = Object.assign({}, defaultOptions, options);
 
-         // handle negatives
-         const sign = Math.sign(num) >= 0;
-         num = Math.abs(num);
+  // handle negatives
+  const sign = Math.sign(num) >= 0;
+  num = Math.abs(num);
 
-         // what tier? (determines SI symbol)
-         const tier = (Math.log10(num) / 3) | 0;
+  // what tier? (determines SI symbol)
+  const tier = (Math.log10(num) / 3) | 0;
 
-         // if zero, we don't need a suffix
-         if (tier == 0) return (!sign ? "-" : "") + num.toString();
+  // if zero, we don't need a suffix
+  if (tier == 0) return (!sign ? "-" : "") + num.toString();
 
-         // get suffix and determine scale
-         const suffix = symbols[tier];
-         if (!suffix) throw new RangeError();
+  // get suffix and determine scale
+  const suffix = symbols[tier];
+  if (!suffix) throw new RangeError();
 
-         const scale = Math.pow(10, tier * 3);
+  const scale = Math.pow(10, tier * 3);
 
-         // scale the number
-         const scaled = num / scale;
+  // scale the number
+  const scaled = num / scale;
 
-         let rounded = scaled.toFixed(digit);
-         if (!padding) {
-           rounded = String(Number(rounded));
-         }
+  let rounded = scaled.toFixed(digit);
+  if (!padding) {
+    rounded = String(Number(rounded));
+  }
 
-         // format number and add suffix
-         return (!sign ? "-" : "") + rounded + suffix;
-       }
+  // format number and add suffix
+  return (!sign ? "-" : "") + rounded + suffix;
+}
