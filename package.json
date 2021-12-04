@@ -8,10 +8,10 @@
     "test": "jest --config=jest.config.json --collectCoverage",
     "build": "tsc",
     "prepare": "tsc",
-    "lint": "./node_modules/.bin/eslint *.ts",
-    "prettier-write": "./node_modules/.bin/prettier --write \"*.ts\"",
-    "prettier-check": "./node_modules/.bin/prettier --check \"*.ts\"",
-    "codecov": "./node_modules/.bin/codecov -t 6fc5b4e4-4e80-42dd-b9ed-057a670de47a"
+    "lint": "eslint *.ts",
+    "prettier-write": "prettier --write \"*.ts\"",
+    "prettier-check": "prettier --check \"*.ts\"",
+    "codecov": "codecov -t 6fc5b4e4-4e80-42dd-b9ed-057a670de47a"
   },
   "repository": {
     "type": "git",
