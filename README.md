@@ -23,6 +23,8 @@ npm install js-abbreviation-number
 
 ## Usage
 
+#### abbreviateNumber
+
 ```js
 import { abbreviateNumber } from "js-abbreviation-number";
 
@@ -39,7 +41,6 @@ const num = abbreviateNumber(1234.56, 2); // expected 1.23k
 const num = abbreviateNumber(1234, 1, {symbols: ['', 'kg']}); // expected 1.2kg
 
 const num = abbreviateNumber(1234567, 1, {symbols: ['', 'kg']}); // expected 1234.5kg
-
 ```
 
 `abbreviateNumber(num: number, digit?: number, options?: {symbols?: string[]; padding: boolean}): string`
@@ -51,6 +52,23 @@ The `options` object is optional too:
 - `symbols` can be an array of units, defaulting to `["", "k", "M", "G", "T", "P", "E"]`.
 - `padding` determines whether to keep the exact number of digits or to drop trailing zeroes.
 
+#### unabbreviateNumber
+
+```js
+import { unabbreviateNumber } from "js-abbreviation-number";
+
+const num = unabbreviateNumber("-25"); // expected -25
+
+const num = unabbreviateNumber("-1.3k"); // expected -1300
+
+const num = unabbreviateNumber("1.123456k"); // expected 1123.456
+
+const num = unabbreviateNumber("666kilo", ["", "kilo", "Mega"]); // expected 666000
+```
+
+`unabbreviateNumber(num: string, symbols?: string[]): number`
+
+`symbols` is optional that can be an array of units, defaulting to `["", "k", "M", "G", "T", "P", "E"]`.
 
 ## Contributing
 
