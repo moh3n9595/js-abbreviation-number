@@ -1,4 +1,4 @@
-import { abbreviateNumber } from "../index";
+import abbreviateNumber from "../functions/abbreviateNumber";
 
 test("-25 should be --> -25", () => {
   expect(abbreviateNumber(-25, 0)).toBe("-25");
@@ -21,7 +21,7 @@ test("1000 should be --> 1.00k", () => {
 });
 
 test("1000 should be --> 1k without padding", () => {
-  expect(abbreviateNumber(1000, 2, {padding: false})).toBe("1k");
+  expect(abbreviateNumber(1000, 2, { padding: false })).toBe("1k");
 });
 
 test("12345 should be --> 12k", () => {
@@ -37,7 +37,9 @@ test("12344 should be --> 12.34k", () => {
 });
 
 test("123456789112345678923456789 should be --> RangeError!", () => {
-  expect( () => abbreviateNumber(123456789112345678923456789, 0)).toThrow(RangeError);
+  expect(() => abbreviateNumber(123456789112345678923456789, 0)).toThrow(
+    RangeError,
+  );
 });
 
 test("0 should be --> 0", () => {
@@ -65,15 +67,21 @@ test("-1234 should be --> -1.2Kilo", () => {
 });
 
 test("-1234 should be --> -1.2Kilo with object", () => {
-  expect(abbreviateNumber(-1234, 1, {symbols: ["", "Kilo"]})).toBe("-1.2Kilo");
+  expect(abbreviateNumber(-1234, 1, { symbols: ["", "Kilo"] })).toBe(
+    "-1.2Kilo",
+  );
 });
 
 test("-1200 should be --> -1.2Kilo without padding", () => {
-  expect(abbreviateNumber(-1200, 4, {symbols: ["", "Kilo"], padding: false})).toBe("-1.2Kilo");
+  expect(
+    abbreviateNumber(-1200, 4, { symbols: ["", "Kilo"], padding: false }),
+  ).toBe("-1.2Kilo");
 });
 
 test("-1234567 should be --> -1234.5Kilo", () => {
-  expect(abbreviateNumber(-1234, 1, {symbols: ["", "Kilo"]})).toBe("-1.2Kilo");
+  expect(abbreviateNumber(-1234, 1, { symbols: ["", "Kilo"] })).toBe(
+    "-1.2Kilo",
+  );
 });
 
 test("12.34 should be --> 12.34", () => {
