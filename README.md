@@ -11,6 +11,7 @@
 [![codecov](https://codecov.io/gh/moh3n9595/js-abbreviation-number/branch/master/graph/badge.svg)](https://codecov.io/gh/moh3n9595/js-abbreviation-number) [![CodeFactor](https://www.codefactor.io/repository/github/moh3n9595/js-abbreviation-number/badge/master)](https://www.codefactor.io/repository/github/moh3n9595/js-abbreviation-number/overview/master)
 [![NPM](https://img.shields.io/npm/v/js-abbreviation-number.svg)](https://www.npmjs.com/package/js-abbreviation-number)
 [![GitHub contributors](https://img.shields.io/github/contributors/moh3n9595/js-abbreviation-number.svg)](https://GitHub.com/moh3n9595/js-abbreviation-number/contributors/)
+[![Npm package yearly downloads](https://badgen.net/npm/dy/js-abbreviation-number)](https://npmjs.com/package/js-abbreviation-number)
 
 </div>
 <hr />
