@@ -19,7 +19,11 @@
 ## Installation
 
 ```
-npm install js-abbreviation-number
+yarn add js-abbreviation-number
+```
+or
+```
+npm i js-abbreviation-number
 ```
 
 ## Usage
@@ -75,15 +79,7 @@ const num = unabbreviateNumber("666kilo", ["", "kilo", "Mega"]); // expected 666
 
 Thank you for your interest in contributing! Please feel free to put up a PR for any issue or feature request.
 
-## Give me a Star
-
-If you think this project is helpful just give me a ⭐️ Star is enough because i don't drink coffee 😃
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/moh3n9595/js-abbreviation-number/blob/master/LICENSE) file for details
-
-## Author
-
-Made with ❤️ by [Mohsen Madani](https://github.com/moh3n9595).
 
