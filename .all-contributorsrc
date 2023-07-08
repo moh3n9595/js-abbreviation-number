@@ -28,6 +28,13 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/1402241?v=4",
       "profile": "https://github.com/fregante",
       "contributions": ["code", "test"]
+    },
+    {
+      "login": "jackdomleo7",
+      "name": "Jack Domleo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43371432?v=4",
+      "profile": "https://jackdomleo.dev/",
+      "contributions": ["code", "test"]
     }
   ],
   "contributorsPerLine": 7,
