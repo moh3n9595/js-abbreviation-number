@@ -21,6 +21,13 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/79398146?v=4",
       "profile": "https://github.com/M0rteza-M",
       "contributions": ["code", "test"]
+    },
+    {
+      "login": "fregante",
+      "name": "Federico Brigante",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1402241?v=4",
+      "profile": "https://github.com/fregante",
+      "contributions": ["code", "test"]
     }
   ],
   "contributorsPerLine": 7,
