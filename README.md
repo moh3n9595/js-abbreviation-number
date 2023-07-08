@@ -95,6 +95,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/moh3n9595"><img src="https://avatars.githubusercontent.com/u/20948388?v=4?s=75" width="75px;" alt="Mohsen"/><br /><sub><b>Mohsen</b></sub></a><br /><a href="https://github.com/moh3n9595/js-abbreviation-number/commits?author=moh3n9595" title="Code">💻</a> <a href="#maintenance-moh3n9595" title="Maintenance">🚧</a> <a href="https://github.com/moh3n9595/js-abbreviation-number/commits?author=moh3n9595" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/M0rteza-M"><img src="https://avatars.githubusercontent.com/u/79398146?v=4?s=75" width="75px;" alt="M0rteza-M"/><br /><sub><b>M0rteza-M</b></sub></a><br /><a href="https://github.com/moh3n9595/js-abbreviation-number/commits?author=M0rteza-M" title="Code">💻</a> <a href="https://github.com/moh3n9595/js-abbreviation-number/commits?author=M0rteza-M" title="Tests">⚠️</a></td>
     </tr>
   </tbody>
 </table>
