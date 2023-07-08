@@ -35,6 +35,13 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/43371432?v=4",
       "profile": "https://jackdomleo.dev/",
       "contributions": ["code", "test"]
+    },
+    {
+      "login": "gustavobonassa",
+      "name": "Gustavo Bonassa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26508215?v=4",
+      "profile": "https://github.com/gustavobonassa",
+      "contributions": ["code", "test"]
     }
   ],
   "contributorsPerLine": 7,
