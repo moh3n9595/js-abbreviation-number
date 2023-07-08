@@ -1,0 +1,22 @@
+{
+  "projectName": "js-abbreviation-number",
+  "projectOwner": "moh3n9595",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": ["README.md"],
+  "imageSize": 75,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "moh3n9595",
+      "name": "Mohsen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20948388?v=4",
+      "profile": "https://github.com/moh3n9595",
+      "contributions": ["code", "maintenance", "test"]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": false
+}
+

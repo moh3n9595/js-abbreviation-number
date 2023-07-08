@@ -32,12 +32,12 @@
     "dist"
   ],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.0",
     "@types/node": "^9.4.6",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^2.18.0",
+    "all-contributors-cli": "^6.26.1",
     "codecov": "^3.6.5",
     "eslint": "^8.4.0",
     "eslint-plugin-import": "^2.19.1",
